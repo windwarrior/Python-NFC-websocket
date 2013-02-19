@@ -23,3 +23,5 @@ nfc_device_get_name.restype = ctypes.c_char_p
 nfc_initiator_poll_target = lib.nfc_initiator_poll_target
 #nfc_initiator_poll_target.argtypes = (ctypes.POINTER(Device), ctypes.POINTER(Modulation), ctypes.c_size_t, ctypes.c_uint8, ctypes.c_uint8, ctypes.POINTER(Target))
 nfc_initiator_poll_target.restype = ctypes.c_int
+
+nfc_initiator_select_passive_target = lib.nfc_initiator_select_passive_target
