@@ -10,6 +10,7 @@ nfc_version = lib.nfc_version
 nfc_version.restype = ctypes.c_char_p
 
 nfc_open = lib.nfc_open
+nfc_open.argtypes = (ctypes.POINTER(Context), ctypes.c_char_p)
 nfc_open.restype = ctypes.POINTER(Device)
 
 nfc_initiator_init = lib.nfc_initiator_init
@@ -25,3 +26,7 @@ nfc_initiator_poll_target = lib.nfc_initiator_poll_target
 nfc_initiator_poll_target.restype = ctypes.c_int
 
 nfc_initiator_select_passive_target = lib.nfc_initiator_select_passive_target
+
+nfc_close = lib.nfc_close
+
+nfc_exit = lib.nfc_exit
